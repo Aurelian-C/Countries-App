@@ -1,0 +1,88 @@
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: $bp-medium) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    width: 25rem;
+    background-color: $light-mode-elements;
+    border-radius: $search-elements-border-radius;
+    box-shadow: $elements-box-shadow;
+
+    @media screen and (max-width: $bp-medium) {
+      width: 80vw;
+    }
+
+    input {
+      border: 0;
+      margin-right: auto;
+      color: $light-mode-input;
+      font-family: inherit;
+      width: 90%;
+
+      &:focus-visible {
+        outline: 0;
+      }
+    }
+  }
+
+  &__icon {
+    height: 1rem;
+    width: 1rem;
+    margin: 0 1rem;
+    fill: $light-mode-input;
+  }
+
+  &__form {
+    width: 90%;
+  }
+
+  &__filter {
+    height: 3rem;
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: $light-mode-elements;
+    border-radius: $search-elements-border-radius;
+    box-shadow: $elements-box-shadow;
+    position: relative;
+  }
+
+  &__options {
+    position: absolute;
+    width: 10rem;
+    top: 50px;
+    box-shadow: $elements-box-shadow;
+    background-color: $light-mode-elements;
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+    &.scale-hidden {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+
+    &--list {
+      list-style: none;
+      padding: 0.8rem 1rem;
+
+      &:hover {
+        background-color: $light-mode-options;
+        cursor: pointer;
+      }
+    }
+  }
+}

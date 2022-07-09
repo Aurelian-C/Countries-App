@@ -1,0 +1,36 @@
+.country {
+  height: 23rem;
+  width: 18rem;
+  border-radius: 5px;
+  box-shadow: $elements-box-shadow;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: $elements-hover-shadow;
+  }
+
+  &__flag {
+    height: 10rem;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__info {
+    padding: 0 1rem;
+  }
+
+  &__title {
+    margin: 20px 0px;
+  }
+
+  &__date {
+    margin-bottom: 7px;
+  }
+}
+
+.info-title {
+  font-weight: 600;
+}

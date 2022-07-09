@@ -1,0 +1,51 @@
+.dark-mode-background {
+  background-color: $dark-mode-background !important;
+}
+
+.dark-mode-elements {
+  background-color: $dark-mode-elements !important;
+}
+
+.dark-mode-text {
+  color: $dark-mode-text !important;
+}
+
+.dark-mode-fill {
+  fill: $dark-mode-text !important;
+}
+
+.search-input-dark-mode {
+  &::placeholder {
+    color: white;
+  }
+}
+
+.neighbour--dark {
+  background-color: $dark-mode-elements !important;
+  box-shadow: $elements-box-shadow-dark-mode !important;
+}
+
+.card-dark-mode {
+  background-color: $dark-mode-elements;
+  box-shadow: $elements-box-shadow-dark-mode !important;
+
+  &:hover {
+    box-shadow: 0 2px 5px #131313 !important;
+  }
+}
+
+.search__options--dark {
+  &:hover {
+    background-color: rgb(59, 74, 88) !important;
+  }
+}
+
+.button--dark {
+  background-color: $dark-mode-elements !important;
+  box-shadow: $elements-box-shadow-dark-mode !important;
+  color: $dark-mode-text;
+}
+
+.icon--dark {
+  fill: $dark-mode-text;
+}

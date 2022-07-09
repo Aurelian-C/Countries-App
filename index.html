@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countries App</title>
+    <link
+      rel="shortcut icon"
+      href="./src/img/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./src/sass/main.scss" />
+    <script defer type="module" src="./src/js/Controller.js"></script>
+  </head>
+  <body>
+    <!-- Header section -->
+    <header class="header">
+      <h1 class="header__title">Where in the world?</h1>
+      <div class="header__modes">
+        <svg class="header__icon">
+          <use href="./src/img/icons.svg#icon-sun"></use>
+        </svg>
+        <!-- <svg class="header__icon dark-mode-fill">
+          <use href="./src/img/icons.svg#icon-brightness-contrast"></use>
+        </svg> -->
+        <p class="header__switch-text">Light Mode</p>
+      </div>
+    </header>
+
+    <div class="page">
+      <!-- Search section -->
+      <section class="search">
+        <div class="search__input">
+          <svg class="search__icon">
+            <use href="./src/img/icons.svg#icon-search"></use>
+          </svg>
+          <form class="search__form">
+            <label for="search-input"></label>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search for a country..."
+            />
+          </form>
+        </div>
+        <div class="search__filter">
+          <button class="btn btn--filter">Filter by Region</button>
+          <svg class="btn__icon btn__icon--filter">
+            <use href="./src/img/icons.svg#icon-arrow-down2"></use>
+          </svg>
+          <ul class="search__options">
+            <li class="search__options--list" data-region="Africa">Africa</li>
+            <li class="search__options--list" data-region="Americas">
+              America
+            </li>
+            <li class="search__options--list" data-region="Asia">Asia</li>
+            <li class="search__options--list" data-region="Europe">Europe</li>
+            <li class="search__options--list" data-region="Oceania">Oceania</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Country cards section -->
+      <section class="countries-container"></section>
+
+      <!-- Country details section -->
+      <section class="country__detail"></section>
+    </div>
+  </body>
+</html>

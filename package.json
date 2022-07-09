@@ -1,0 +1,15 @@
+{
+  "name": "cioloca-aurelian__rest-countries-api",
+  "version": "1.0.0",
+  "description": "An application with countries",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
+    "parcel": "^2.6.2"
+  }
+}

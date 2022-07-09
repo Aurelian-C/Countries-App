@@ -1,0 +1,27 @@
+.btn {
+  border: none;
+  cursor: pointer;
+  background-color: $light-mode-elements;
+  font-family: inherit;
+
+  &__icon {
+    height: 0.7rem;
+    width: 0.7rem;
+
+    &--filter {
+      margin-left: auto;
+    }
+  }
+
+  &--back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: 2rem;
+    width: 7rem;
+    margin-bottom: 3rem;
+    border-radius: $search-elements-border-radius;
+    box-shadow: $elements-box-shadow;
+  }
+}

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+$dark-mode-elements: rgb(43, 57, 69);
+$dark-mode-background: rgb(32, 44, 55);
+$dark-mode-text: rgb(255, 255, 255);
+$light-mode-elements: rgb(255, 255, 255);
+$light-mode-background: rgb(250, 250, 250);
+$light-mode-text: rgb(17, 21, 23);
+$light-mode-input: rgb(133, 133, 133);
+$light-mode-options: rgb(239, 239, 239);
+
+$page-padding: 2rem 3rem;
+$elements-box-shadow: 0px 2px 5px rgba(62, 62, 62, 0.13);
+$elements-box-shadow-dark-mode: 0 2px 5px #13131363;
+$elements-hover-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+$search-elements-border-radius: 5px;
+
+$bp-large: 816px;
+$bp-medium: 723px;
+$bp-samll: 660px;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: $light-mode-background;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.display-none {
+  display: none;
+}
+
+.countries-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 18rem));
+  justify-content: space-evenly;
+  gap: 1.5rem;
+}
+
+section {
+  padding: $page-padding;
+
+  @media screen and (max-width: 415px) {
+    padding: 2rem 1.5rem;
+  }
+}
