@@ -4,6 +4,15 @@ import { View } from './View';
 class CountryView extends View {
   _parentElement = document.querySelector('.country__detail');
 
+  addHandlerSelectNeighbour(handlerFunc) {
+    this._parentElement.addEventListener('click', function (e) {
+      const btn = e.target.closest('.country-detail__borders-neighbour');
+      if (!btn) return;
+      const neighbour = btn.textContent;
+      handlerFunc(neighbour);
+    });
+  }
+
   addHandlerRemoveCountryPage(handlerFunc) {
     this._parentElement.addEventListener('click', e => {
       const btn = e.target.closest('.btn--back');

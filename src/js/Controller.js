@@ -50,19 +50,13 @@ const controlAddPageCountry = async function (countryName) {
   }
 };
 
-// const controlLightDarkMode = function () {
-//   CountryView.render(
-//     Model.state.country[0],
-//     Model.state.allCountryShortcutName
-//   );
-// };
-
 const init = function () {
   controlAllCountries();
   FilterView.addHandlerFilteredCountries(controlFilteredCountries);
   SearchView.addHandlerSubmit(controlSearchCountry);
   CountriesView.addHandlerSelectCountry(controlAddPageCountry);
   CountryView.addHandlerRemoveCountryPage();
+  CountryView.addHandlerSelectNeighbour(controlAddPageCountry);
   LightDarkView.addHandlerLightDarkMode();
 };
 init();
