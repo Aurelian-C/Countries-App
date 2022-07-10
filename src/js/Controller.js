@@ -40,6 +40,7 @@ const controlSearchCountry = async function (countryName) {
 
 const controlAddPageCountry = async function (countryName) {
   try {
+    CountryView.renderSpinner();
     await Model.getCountry(countryName);
     CountryView.render(
       Model.state.country[0],
