@@ -7,7 +7,7 @@ class LightDarkView {
     this._btn.addEventListener('click', () => {
       this._selectElements();
       this._darkTheme();
-      handlerFunc();
+      // handlerFunc();
     });
   }
 
@@ -54,26 +54,26 @@ class LightDarkView {
     this._searchOptionsLists.forEach(list =>
       list.classList.toggle('search__options--dark')
     );
-    this._btnBack.classList.toggle('button--dark');
-    this._btnBackIcon.classList.toggle('icon--dark');
+    this._btnBack?.classList.toggle('button--dark');
+    this._btnBackIcon?.classList.toggle('icon--dark');
     this._neighbourList.forEach(list =>
       list.classList.toggle('neighbour--dark')
     );
 
     if (this._html.classList.contains('dark')) {
-      this._headerSwitchText.textContent = 'Dark Mode';
-
-      this._headerIcon.innerHTML = `
-        <svg class="header__icon dark-mode-fill">
-          <use href="${icons}#icon-brightness-contrast"></use>
-        </svg>
-      `;
-    } else {
       this._headerSwitchText.textContent = 'Light Mode';
 
       this._headerIcon.innerHTML = `
-        <svg class="header__icon">
+        <svg class="header__icon dark-mode-fill">
           <use href="${icons}#icon-sun"></use>
+        </svg>
+      `;
+    } else {
+      this._headerSwitchText.textContent = 'Dark Mode';
+
+      this._headerIcon.innerHTML = `
+        <svg class="header__icon">
+          <use href="${icons}#icon-brightness-contrast"></use>
         </svg>
       `;
     }

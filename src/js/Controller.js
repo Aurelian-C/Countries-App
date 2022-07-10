@@ -50,12 +50,12 @@ const controlAddPageCountry = async function (countryName) {
   }
 };
 
-const controlLightDarkMode = function () {
-  // CountryView.render(
-  //   Model.state.country[0],
-  //   Model.state.allCountryShortcutName
-  // );
-};
+// const controlLightDarkMode = function () {
+//   CountryView.render(
+//     Model.state.country[0],
+//     Model.state.allCountryShortcutName
+//   );
+// };
 
 const init = function () {
   controlAllCountries();
@@ -63,6 +63,6 @@ const init = function () {
   SearchView.addHandlerSubmit(controlSearchCountry);
   CountriesView.addHandlerSelectCountry(controlAddPageCountry);
   CountryView.addHandlerRemoveCountryPage();
-  LightDarkView.addHandlerLightDarkMode(controlLightDarkMode);
+  LightDarkView.addHandlerLightDarkMode();
 };
 init();
